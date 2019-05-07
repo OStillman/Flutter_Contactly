@@ -3,6 +3,7 @@ import 'helpers/constants.dart';
 import 'models/records.dart';
 import 'models/recordslist.dart';
 import 'models/recordservice.dart';
+import 'detailspage.dart';
 
 //Called and used when navigating to and presenting the page
 class HomePage extends StatefulWidget {
@@ -137,7 +138,9 @@ class _HomePageState extends State<HomePage>{
           ),
           trailing:
           Icon(Icons.keyboard_arrow_right, color: Colors.white, size: 30.0),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => new DetailPage(record: record)));
+          },
         ),
       ),
     );
